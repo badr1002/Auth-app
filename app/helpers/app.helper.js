@@ -15,10 +15,10 @@ class Helper {
         }))
         let mailOptions = {
             from: 'badrhelal333@gmail.com',
-            to: `${email}`,
+            to: email,
             subject: 'activate your account',
             text: 'activate your account open this link',
-            html: `<p>Click <a href="https://auth-app1002.herokuapp.com/user/active/${key}">here</a> to active your acount</p>`
+            html: `<p>Click <a href="localhost:5000/user/active/${key}">here</a> to active your acount</p>`
         }
 
         await transporter.sendMail(mailOptions, function (error, info) {
@@ -38,7 +38,7 @@ class Helper {
         }))
         let mailOptions = {
             from: 'badrhelal333@gmail.com',
-            to: ${email},
+            to: email,
             subject: 'Set new password',
             text: 'set new password copy this code',
             html: `<span>Code <h1 style="color:blue;">${id}</h1></span>`
